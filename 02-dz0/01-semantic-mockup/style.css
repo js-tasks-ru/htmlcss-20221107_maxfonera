@@ -1,0 +1,55 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 4em;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: OrangeRed;
+  text-align: center;
+}
+nav {
+  background-color: SandyBrown;
+  padding: 15px;
+}
+a {
+  margin: 5px;
+  font-size: 2.3em;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: SeaGreen;
+  flex-grow: 1;
+}
+article {
+  background-color: DodgerBlue;
+  flex: 1 1 auto;
+  margin: 15px;
+}
+article:first-child {
+  margin-bottom: 0;
+}
+div {
+  padding: 2rem;
+  font-size: 3em;
+}
+ul,
+ol {
+  padding: 1em 5em;
+}
+li {
+  font-size: 2em;
+}
+footer {
+  background-color: MediumOrchid;
+  text-align: center;
+  flex-shrink: 0;
+}
