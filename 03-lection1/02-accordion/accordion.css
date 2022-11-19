@@ -1,1 +1,21 @@
 /* Стилизация аккордеона */
+/* details summary::-webkit-details-marker {
+  display: none;
+} */
+body p {
+  margin: 0;
+}
+
+summary {
+  list-style: none;
+}
+.accordion__item {
+  margin: 1em;
+}
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
+details[open] > summary {
+  color: #eee;
+  background-color: rgb(126, 17, 227);
+}
