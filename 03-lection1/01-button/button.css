@@ -1,4 +1,11 @@
 /* Стилизация кнопки */
+
+:root {
+  --blue: #4263eb;
+  --secondary-hover: #5028c6;
+  --primary-hover: #2342c0;
+}
+
 .btn {
   font-family: 'Roboto';
   font-style: normal;
