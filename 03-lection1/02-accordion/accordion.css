@@ -19,6 +19,7 @@ details {
   margin-bottom: 8px;
   border: 1px solid var(--grey-3);
 }
+
 summary::-webkit-details-marker {
   display: none;
 }
@@ -53,4 +54,7 @@ summary::marker {
 }
 details[open] > .title__item:before {
   transform: rotate(180deg);
+}
+details:last-child {
+  margin-bottom: 0;
 }
