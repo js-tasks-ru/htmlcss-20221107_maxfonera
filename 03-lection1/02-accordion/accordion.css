@@ -1,21 +1,56 @@
 /* Стилизация аккордеона */
-/* details summary::-webkit-details-marker {
-  display: none;
-} */
-body p {
+@import './fonts/Inter.css';
+
+* {
+  font-family: 'Inter';
   margin: 0;
+  padding: 0;
 }
 
-summary {
-  list-style: none;
+body {
+  padding: 2rem 5rem;
 }
-.accordion__item {
-  margin: 1em;
+details {
+  display: block;
+  background: var(--white);
+  width: 730px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid var(--grey-3);
 }
-.accordion__item:last-child {
-  margin-bottom: 0;
+summary::-webkit-details-marker {
+  display: none;
 }
-details[open] > summary {
-  color: #eee;
-  background-color: rgb(126, 17, 227);
+summary::-moz-list-bullet {
+  list-style-type: none;
+}
+summary::marker {
+  display: none;
+}
+.title__item {
+  display: block;
+  padding: 1.5em 2em;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+}
+.text__item {
+  padding: 0 2em 1em;
+}
+.title__item:before {
+  padding: 1.1em;
+  top: 0.4em;
+  right: 0.3em;
+  color: transparent;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNTkgOC41OUwxMiAxMy4xNyA3LjQxIDguNTkgNiAxMGw2IDYgNi02eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=')
+    no-repeat 50% 50% / 1em 1em;
+  width: 1.5em;
+  height: 1em;
+  content: '';
+  position: absolute;
+  transition: transform 0.5s;
+}
+details[open] > .title__item:before {
+  transform: rotate(180deg);
 }
