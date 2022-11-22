@@ -1,45 +1,34 @@
 /* Стилизация аккордеона */
-@import './fonts/Inter.css';
-
 * {
-  font-family: 'Inter';
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
-
-body {
-  padding: 2rem 5rem;
-}
-details {
+.accordion {
   display: block;
   background: var(--white);
-  width: 730px;
-  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 8px;
+}
+.accordion__item {
   border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
-
-summary::-webkit-details-marker {
-  display: none;
-}
-summary::-moz-list-bullet {
-  list-style-type: none;
-}
-summary::marker {
-  display: none;
-}
-.title__item {
+.accordion__title {
   display: block;
   padding: 1.5em 2em;
   font-size: 1em;
   cursor: pointer;
   position: relative;
 }
-.text__item {
-  padding: 0 2em 1em;
+.accordion__title::-webkit-details-marker {
+  display: none;
 }
-.title__item:before {
+.accordion__title::-moz-list-bullet {
+  list-style-type: none;
+}
+.accordion__title::marker {
+  display: none;
+}
+.accordion__title:before {
   padding: 1.1em;
   top: 0.4em;
   right: 0.3em;
@@ -52,9 +41,18 @@ summary::marker {
   position: absolute;
   transition: transform 0.5s;
 }
-details[open] > .title__item:before {
+.accordion__text {
+  padding: 0 2em 1em;
+}
+.accordion__text_font-inter {
+  font-family: 'Inter', sans-serif;
+}
+.accordion__text_font-roboto {
+  font-family: 'Roboto';
+}
+.accordion__item[open] > .accordion__title:before {
   transform: rotate(180deg);
 }
-details:last-child {
+.accordion__item:last-child {
   margin-bottom: 0;
 }
