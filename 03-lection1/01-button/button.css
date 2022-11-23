@@ -16,39 +16,41 @@ body {
   text-align: center;
   color: var(--white);
   border-radius: 8px;
-  padding: 18px;
+  padding: 15px 15px 14px;
   cursor: pointer;
   transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
-  margin-right: 33px;
 }
 .btn:active {
   background: var(--pink);
   color: var(--red);
 }
-.btn__primary {
+.btn_primary {
   background: var(--primary);
   border: var(--primary);
 }
-.btn__primary:hover:not([disabled]) {
+.btn_primary:hover:not([disabled]) {
   background: var(--primary-hover);
 }
-.btn__secondary {
+.btn_secondary {
   background: var(--secondary);
   border: var(--secondary);
 }
-.btn__secondary:hover:not([disabled]) {
+.btn_secondary:hover:not([disabled]) {
   background: var(--secondary-hover);
 }
-.btn__alternate {
+.btn_alternate {
   background: var(--white);
   border: 1px solid var(--grey-3);
   color: var(--grey-4);
 }
-.btn__alternate:hover:not([disabled]) {
+.btn_alternate:hover:not([disabled]) {
   border: 1px solid var(--black);
 }
 .btn:disabled {
   pointer-events: none;
   opacity: 0.5;
   cursor: not-allowed;
+}
+.btn_ident {
+  margin-right: 33px;
 }
