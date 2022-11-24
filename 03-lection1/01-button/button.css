@@ -1,13 +1,10 @@
 /* Стилизация кнопки */
 
-body {
+.btn {
   --blue: #4263eb;
   --primary: var(--blue);
   --secondary-hover: #5028c6;
   --primary-hover: #2342c0;
-}
-
-.btn {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -50,7 +47,4 @@ body {
   pointer-events: none;
   opacity: 0.5;
   cursor: not-allowed;
-}
-.btn_ident {
-  margin-right: 33px;
 }
