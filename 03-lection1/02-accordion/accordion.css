@@ -1,8 +1,6 @@
 /* Стилизация аккордеона */
-* {
-  font-family: 'Inter', sans-serif;
-}
 .accordion {
+  font-family: 'Inter', sans-serif;
   display: block;
   background: var(--white);
   overflow: hidden;
@@ -10,20 +8,24 @@
 .accordion__item {
   border: 1px solid var(--grey-3);
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin: 8px;
   padding: 1.5em 2em;
   font-style: normal;
-  line-height: 24px;
-  font-weight: 400;
-  font-size: 24px;
 }
 .accordion__title {
   display: block;
   font-size: 1em;
   cursor: pointer;
   position: relative;
-  height: 24px;
+  line-height: 24px;
+  font-weight: 400;
 }
+.accordion__text {
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: 400;
+}
+
 .accordion__title::-webkit-details-marker {
   display: none;
 }
