@@ -1,1 +1,56 @@
 /* Стилизация аккордеона */
+.accordion {
+  font-family: 'Inter', sans-serif;
+  display: block;
+  background: var(--white);
+  overflow: hidden;
+}
+.accordion__item {
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 1.5em 2em;
+  font-style: normal;
+}
+.accordion__title {
+  display: block;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  line-height: 24px;
+  font-weight: 400;
+}
+.accordion__text {
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.accordion__title::-webkit-details-marker {
+  display: none;
+}
+.accordion__title::-moz-list-bullet {
+  list-style-type: none;
+}
+.accordion__title::marker {
+  display: none;
+}
+.accordion__title:before {
+  top: 0.3rem;
+  right: 0.3rem;
+  color: transparent;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNTkgOC41OUwxMiAxMy4xNyA3LjQxIDguNTkgNiAxMGw2IDYgNi02eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=')
+    no-repeat 50% 50% / 1rem 1rem;
+  width: 1.5rem;
+  height: 1rem;
+  content: '';
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+.accordion__item[open] > .accordion__title:before {
+  transform: rotate(180deg);
+}
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
