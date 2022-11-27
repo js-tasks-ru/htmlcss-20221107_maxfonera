@@ -1,0 +1,12 @@
+.preview {
+  background: var(--grey-1);
+  padding: 32px 25px;
+}
+
+.preview__cards {
+  margin: -22px;
+}
+
+.preview__card {
+  margin: 15px;
+}

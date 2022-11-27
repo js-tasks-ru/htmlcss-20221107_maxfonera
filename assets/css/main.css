@@ -1,4 +1,15 @@
+/* здесь подключаем css для проекта */
 @import '../fonts/fonts.css';
+
+@import './normalize.css';
+
+@import '../../components/footer/footer.css';
+@import '../../components/header/header.css';
+@import '../../components/page/page.css';
+@import '../../components/preview/preview.css';
+@import '../../components/container/container.css';
+@import '../../03-lection1/01-button/button.css';
+@import '../../components/card/card.css';
 
 :root {
   --white: #ffffff;
@@ -7,7 +18,7 @@
   --purple: #7048e8;
   --blue: #374fc7;
   --red: #f03d3e;
-  --grey-1: #f8f9fa;
+  --grey-1: #f9fafc;
   --grey-2: #dde2e5;
   --grey-3: #acb5bd;
   --grey-4: #495057;
@@ -19,6 +30,6 @@
   --secondary: var(--purple);
 }
 
-* {
+body {
   font-family: 'Roboto', sans-serif;
 }
